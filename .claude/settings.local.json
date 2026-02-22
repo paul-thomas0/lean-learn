@@ -12,7 +12,13 @@
       "Bash(export PATH=\"$HOME/.nvm/versions/node/v22.22.0/bin:/usr/bin:/bin:$PATH\" && npm run build 2>&1)",
       "Bash(export:*)",
       "Bash(export PATH=\"/Users/paulthomas/.nvm/versions/node/v22.22.0/bin:$PATH\" && cd /Users/paulthomas/Documents/GitHub/lean-learn/lazyvim-trainer && npm run build 2>&1)",
-      "Bash(export PATH=\"/Users/paulthomas/.nvm/versions/node/v22.22.0/bin:$PATH\" && npm run build 2>&1)"
+      "Bash(export PATH=\"/Users/paulthomas/.nvm/versions/node/v22.22.0/bin:$PATH\" && npm run build 2>&1)",
+      "WebFetch(domain:type-level-typescript.com)",
+      "WebFetch(domain:zerotomastery.io)",
+      "Bash(head:*)",
+      "Bash(which node:*)",
+      "Bash(PATH=\"/Users/paulthomas/.nvm/versions/node/v22.22.0/bin:/bin:/usr/bin:/usr/local/bin:$PATH\" npx:*)",
+      "Bash(PATH=\"/Users/paulthomas/.nvm/versions/node/v22.22.0/bin:/bin:/usr/bin:/usr/local/bin:$PATH\" node:*)"
     ]
   }
 }
