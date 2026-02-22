@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(export NVM_DIR=\"$HOME/.nvm\" && . \"$NVM_DIR/nvm.sh\" && npm run dev 2>&1)",
+      "Bash(cd /Users/paulthomas/Documents/GitHub/lean-learn/lazyvim-trainer && npm run build 2>&1)",
+      "Bash(source ~/.nvm/nvm.sh && cd /Users/paulthomas/Documents/GitHub/lean-learn/lazyvim-trainer && npm run build 2>&1)",
+      "WebSearch",
+      "WebFetch(domain:lazyvim.github.io)",
+      "WebFetch(domain:www.lazyvim.org)",
+      "Bash(tail:*)",
+      "Bash(export PATH=\"$HOME/.nvm/versions/node/v22.22.0/bin:/usr/bin:/bin:$PATH\" && npm run build 2>&1)",
+      "Bash(export:*)",
+      "Bash(export PATH=\"/Users/paulthomas/.nvm/versions/node/v22.22.0/bin:$PATH\" && cd /Users/paulthomas/Documents/GitHub/lean-learn/lazyvim-trainer && npm run build 2>&1)",
+      "Bash(export PATH=\"/Users/paulthomas/.nvm/versions/node/v22.22.0/bin:$PATH\" && npm run build 2>&1)"
+    ]
+  }
+}

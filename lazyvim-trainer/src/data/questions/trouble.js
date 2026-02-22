@@ -1,0 +1,18 @@
+export default [
+  { q: "Toggle diagnostics list", a: "Space-xx", cat: "trouble", hint: "x = trouble",
+    ex: { before: null, after: '┌─ Trouble ────────────────┐\n│ E app.ts:12 type error   │\n│ W lib.ts:5  unused var   │\n└──────────────────────────┘', desc: "Opens Trouble panel with all diagnostics" } },
+  { q: "Buffer diagnostics", a: "Space-xX", cat: "trouble",
+    ex: { before: null, after: '┌─ Trouble (buffer) ───────┐\n│ E line 12  type error    │\n│ W line 25  unused import │\n└──────────────────────────┘', desc: "Shows diagnostics for current buffer only" } },
+  { q: "Quickfix list", a: "Space-xQ", cat: "trouble",
+    ex: { before: null, after: '┌─ Quickfix ───────────────┐\n│ app.ts:12  match 1       │\n│ lib.ts:44  match 2       │\n└──────────────────────────┘', desc: "Opens quickfix list in Trouble" } },
+  { q: "Location list", a: "Space-xL", cat: "trouble",
+    ex: { before: null, after: '┌─ Location List ──────────┐\n│ line 12  reference       │\n│ line 44  reference       │\n└──────────────────────────┘', desc: "Opens location list in Trouble" } },
+  { q: "Symbols outline", a: "Space-cs", cat: "trouble", hint: "c = code, s = symbols",
+    ex: { before: null, after: '┌─ Symbols ────────────────┐\n│ ▼ class App              │\n│   fn render()            │\n│   fn handleClick()       │\n└──────────────────────────┘', desc: "Opens document symbols outline in Trouble" } },
+  { q: "Next trouble item", a: "]q", cat: "trouble", hint: "] = next",
+    ex: { before: '│ E app.ts:12 │← current\n│ W lib.ts:5  │', after: '│ E app.ts:12 │\n│ W lib.ts:5  │← current', desc: "Jump to next item in trouble/quickfix list" } },
+  { q: "Previous trouble item", a: "[q", cat: "trouble",
+    ex: { before: '│ E app.ts:12 │\n│ W lib.ts:5  │← current', after: '│ E app.ts:12 │← current\n│ W lib.ts:5  │', desc: "Jump to previous item in trouble/quickfix list" } },
+  { q: "Toggle Trouble filter (errors only)", a: "Space-xf", cat: "trouble",
+    ex: { before: '│ E error  │\n│ W warn   │\n│ I info   │', after: '│ E error  │  ← filtered', desc: "Filters trouble list to show only errors" } },
+];

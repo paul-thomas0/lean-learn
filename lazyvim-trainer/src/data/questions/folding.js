@@ -1,0 +1,16 @@
+export default [
+  { q: "Fold current block", a: "zc", cat: "fold", hint: "z = folding, c = close",
+    ex: { before: 'function foo() {\n  line1\n  line2\n}', after: 'function foo() {···}  ← folded', desc: "Closes the fold at cursor" } },
+  { q: "Open current fold", a: "zo", cat: "fold", hint: "z = folding, o = open",
+    ex: { before: 'function foo() {···}  ← folded', after: 'function foo() {\n  line1\n  line2\n}', desc: "Opens the fold at cursor" } },
+  { q: "Toggle current fold", a: "za", cat: "fold", hint: "a = alternate",
+    ex: { before: 'function foo() {\n  line1\n}', after: 'function foo() {···}  ← toggled', desc: "Toggles fold open/closed at cursor" } },
+  { q: "Close all folds", a: "zM", cat: "fold", hint: "M = fold Maximum",
+    ex: { before: 'fn1 { ... }\nfn2 { ... }\nfn3 { ... }', after: 'fn1 {···}\nfn2 {···}\nfn3 {···}  ← all folded', desc: "Closes every fold in the file" } },
+  { q: "Open all folds", a: "zR", cat: "fold", hint: "R = Reduce all folds",
+    ex: { before: 'fn1 {···}\nfn2 {···}', after: 'fn1 { ... }\nfn2 { ... }  ← all open', desc: "Opens every fold in the file" } },
+  { q: "Fold all except cursor", a: "zv", cat: "fold",
+    ex: { before: 'fn1 { ... }\nfn2 { │code }\nfn3 { ... }', after: 'fn1 {···}\nfn2 { │code }  ← only this open\nfn3 {···}', desc: "Opens just enough folds to reveal cursor line" } },
+  { q: "Peek folded lines", a: "zk", cat: "fold",
+    ex: { before: 'function foo() {···}│  ← folded', after: '┌─ Preview ────────────┐\n│ line1                │\n│ line2                │\n└──────────────────────┘', desc: "Preview folded text without opening fold" } },
+];
