@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tail:*)",
+      "Bash(echo SHELL: $SHELL:*)",
+      "Bash(source:*)",
+      "Bash(ls:*)",
+      "Bash(head:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

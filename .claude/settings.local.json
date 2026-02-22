@@ -18,7 +18,10 @@
       "Bash(head:*)",
       "Bash(which node:*)",
       "Bash(PATH=\"/Users/paulthomas/.nvm/versions/node/v22.22.0/bin:/bin:/usr/bin:/usr/local/bin:$PATH\" npx:*)",
-      "Bash(PATH=\"/Users/paulthomas/.nvm/versions/node/v22.22.0/bin:/bin:/usr/bin:/usr/local/bin:$PATH\" node:*)"
+      "Bash(PATH=\"/Users/paulthomas/.nvm/versions/node/v22.22.0/bin:/bin:/usr/bin:/usr/local/bin:$PATH\" node:*)",
+      "Bash(source:*)",
+      "Bash(export NVM_DIR=\"$HOME/.nvm\" && source \"$NVM_DIR/nvm.sh\" && cd /Users/paulthomas/Documents/GitHub/lean-learn/v8-internals && npm install && npm install framer-motion && npm install -D tailwindcss @tailwindcss/vite 2>&1)",
+      "Bash(cd:*)"
     ]
   }
 }
