@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lean Learn — Developer Learning Hub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0e1a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 960px;
+      width: 100%;
+    }
+
+    .card {
+      background: #141929;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 2rem;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #3b82f6;
+      box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+    }
+
+    .card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #f1f5f9;
+    }
+
+    .card p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .card .port {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: #64748b;
+      font-family: monospace;
+      background: #0f1320;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      color: #475569;
+      font-size: 0.85rem;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    footer code {
+      background: #141929;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      color: #60a5fa;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lean Learn</h1>
+  <p class="subtitle">Interactive learning apps for developers</p>
+
+  <div class="cards">
+    <a class="card" href="http://localhost:5173">
+      <div class="icon">⌨️</div>
+      <h2>LazyVim Trainer</h2>
+      <p>Master LazyVim keybindings with quizzes across 16 categories — movement, git, LSP, and more.</p>
+      <span class="port">localhost:5173</span>
+    </a>
+
+    <a class="card" href="http://localhost:5174">
+      <div class="icon">🔷</div>
+      <h2>TypeScript Trainer</h2>
+      <p>Learn the TypeScript type system — generics, utility types, narrowing, and 14 categories of concepts.</p>
+      <span class="port">localhost:5174</span>
+    </a>
+
+    <a class="card" href="http://localhost:5175">
+      <div class="icon">⚙️</div>
+      <h2>V8 Internals</h2>
+      <p>Explore V8 engine internals, Chrome architecture, and Node.js integration with interactive diagrams.</p>
+      <span class="port">localhost:5175</span>
+    </a>
+  </div>
+
+  <footer>
+    Run <code>./start.sh</code> to launch all apps, then click the cards above.
+  </footer>
+</body>
+</html>

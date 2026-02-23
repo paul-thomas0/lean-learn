@@ -104,6 +104,25 @@ export function HomeScreen({ onNavigate }: HomeScreenProps) {
           );
         })}
       </div>
+      {/* References link */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: modules.length * 0.1 }}
+        className="mt-8"
+      >
+        <button
+          onClick={() => onNavigate({ screen: 'references' })}
+          className="w-full flex items-center gap-3 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] p-5 hover:bg-[var(--bg-tertiary)] transition-colors text-left"
+        >
+          <span className="text-2xl">📚</span>
+          <div>
+            <div className="text-sm font-bold text-[var(--text-primary)]">References</div>
+            <div className="text-xs text-[var(--text-muted)]">Official docs, blog posts, and talks by the V8 team</div>
+          </div>
+          <span className="ml-auto text-[var(--text-muted)]">→</span>
+        </button>
+      </motion.div>
     </motion.div>
   );
 }

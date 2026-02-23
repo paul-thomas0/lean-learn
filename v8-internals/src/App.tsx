@@ -6,6 +6,7 @@ import { HomeScreen } from './components/screens/HomeScreen';
 import { SectionScreen } from './components/screens/SectionScreen';
 import { QuizScreen } from './components/screens/QuizScreen';
 import { ResultsScreen } from './components/screens/ResultsScreen';
+import { ReferencesScreen } from './components/screens/ReferencesScreen';
 import type { NavigationTarget } from './types';
 
 function AppContent() {
@@ -34,6 +35,9 @@ function AppContent() {
         )}
         {nav.screen === 'results' && (
           <ResultsScreen moduleId={nav.moduleId} onNavigate={onNavigate} />
+        )}
+        {nav.screen === 'references' && (
+          <ReferencesScreen onNavigate={onNavigate} />
         )}
       </AnimatePresence>
     </AppShell>

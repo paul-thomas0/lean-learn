@@ -9,7 +9,7 @@ interface MobileNavProps {
 
 export function MobileNav({ currentNav, onNavigate }: MobileNavProps) {
   const isHome = currentNav.screen === 'home';
-  const currentModuleId = currentNav.screen !== 'home' ? (currentNav as { moduleId: ModuleId }).moduleId : null;
+  const currentModuleId = (currentNav.screen !== 'home' && currentNav.screen !== 'references') ? (currentNav as { moduleId: ModuleId }).moduleId : null;
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-[var(--bg-secondary)] border-t border-[var(--border)] flex md:hidden z-50">
@@ -22,6 +22,16 @@ export function MobileNav({ currentNav, onNavigate }: MobileNavProps) {
       >
         <span className="text-lg">🏠</span>
         <span>Home</span>
+      </button>
+      <button
+        onClick={() => onNavigate({ screen: 'references' })}
+        className={cn(
+          'flex-1 flex flex-col items-center py-2 text-xs transition-colors',
+          currentNav.screen === 'references' ? 'text-[var(--accent-blue)]' : 'text-[var(--text-muted)]'
+        )}
+      >
+        <span className="text-lg">📚</span>
+        <span>Refs</span>
       </button>
       {modules.map((mod) => (
         <button

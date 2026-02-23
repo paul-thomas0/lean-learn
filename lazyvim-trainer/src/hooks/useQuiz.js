@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import ALL_QUESTIONS from "../data/questions/index";
 import { shuffle, genOpts } from "../utils/quiz";
 
-const M = { menu: 0, quiz: 1, results: 2, learn: 3, cheatsheet: 4 };
+const M = { menu: 0, quiz: 1, results: 2, learn: 3, cheatsheet: 4, references: 5 };
 
 export default function useQuiz() {
   const [mode, setMode] = useState(M.menu);
@@ -84,5 +84,6 @@ export default function useQuiz() {
     learnCat,
     goToLearn: (catKey) => { setLearnCat(catKey); setMode(M.learn); },
     goToCheatSheet: () => setMode(M.cheatsheet),
+    goToReferences: () => setMode(M.references),
   };
 }

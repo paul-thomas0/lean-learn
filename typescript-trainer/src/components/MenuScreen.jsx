@@ -11,7 +11,7 @@ const tabStyle = (active) => ({
   position: "relative",
 });
 
-export default function MenuScreen({ categories, allQuestions, cats, setCats, gameMode, setGameMode, onStart, onLearn, onCheatSheet }) {
+export default function MenuScreen({ categories, allQuestions, cats, setCats, gameMode, setGameMode, onStart, onLearn, onCheatSheet, onReferences }) {
   const [tab, setTab] = useState("practice");
   const ck = Object.keys(categories);
   return (
@@ -29,6 +29,7 @@ export default function MenuScreen({ categories, allQuestions, cats, setCats, ga
           <button onClick={() => setTab("practice")} style={tabStyle(tab === "practice")}>Practice</button>
           <button onClick={() => setTab("learn")} style={tabStyle(tab === "learn")}>Learn</button>
           <button onClick={() => onCheatSheet()} style={tabStyle(false)}>Cheat Sheet</button>
+          <button onClick={() => onReferences()} style={tabStyle(false)}>References</button>
         </div>
 
         {/* Practice tab */}

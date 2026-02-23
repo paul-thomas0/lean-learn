@@ -126,6 +126,21 @@ export function Sidebar({ currentNav, onNavigate }: SidebarProps) {
           );
         })}
       </nav>
+
+      <div className="border-t border-[var(--border)] p-3">
+        <button
+          onClick={() => onNavigate({ screen: 'references' })}
+          className={cn(
+            'w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors',
+            currentNav.screen === 'references'
+              ? 'bg-[var(--bg-tertiary)] text-[var(--text-primary)]'
+              : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-tertiary)]'
+          )}
+        >
+          <span className="text-base">📚</span>
+          <span>References</span>
+        </button>
+      </div>
     </aside>
   );
 }

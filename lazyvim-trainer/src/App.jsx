@@ -6,6 +6,7 @@ import QuizScreen from "./components/QuizScreen";
 import ResultsScreen from "./components/ResultsScreen";
 import LearnScreen from "./components/LearnScreen";
 import CheatSheetScreen from "./components/CheatSheetScreen";
+import ReferencesScreen from "./components/ReferencesScreen";
 
 export default function App() {
   const quiz = useQuiz();
@@ -22,6 +23,7 @@ export default function App() {
         onStart={quiz.start}
         onLearn={quiz.goToLearn}
         onCheatSheet={quiz.goToCheatSheet}
+        onReferences={quiz.goToReferences}
       />
     );
   }
@@ -71,6 +73,10 @@ export default function App() {
 
   if (quiz.mode === 4) {
     return <CheatSheetScreen onBack={quiz.goToMenu} />;
+  }
+
+  if (quiz.mode === 5) {
+    return <ReferencesScreen onBack={quiz.goToMenu} />;
   }
 
   return null;

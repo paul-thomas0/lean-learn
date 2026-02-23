@@ -56,4 +56,5 @@ export type NavigationTarget =
   | { screen: 'home' }
   | { screen: 'section'; moduleId: ModuleId; sectionId: string }
   | { screen: 'quiz'; moduleId: ModuleId }
-  | { screen: 'results'; moduleId: ModuleId };
+  | { screen: 'results'; moduleId: ModuleId }
+  | { screen: 'references' };
